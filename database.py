@@ -29,7 +29,7 @@ class DataBase:
             if todaysdate != fetcheddateobject:
                 self.cursor.execute('DELETE FROM list')
                 self.cursor.execute('DELETE FROM datelist')
-                self.cursor.execute('INSERT INTO datelist VALUES (?)',(str(todaysdate)))
+                self.cursor.execute('INSERT INTO datelist VALUES (?)',(str(todaysdate),))
         self.conn.commit()
 
     def fetchAll(self):
